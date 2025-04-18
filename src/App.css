@@ -1,0 +1,182 @@
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Mobile sidebar overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+/* Mobile sidebar */
+@media (max-width: 767px) {
+  .sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-mobile.open {
+    transform: translateX(0);
+  }
+
+  /* Mobile-friendly buttons and inputs */
+  .btn-mobile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Stack form elements vertically on mobile */
+  .form-stack-mobile {
+    flex-direction: column;
+  }
+
+  /* Add more padding for touch targets */
+  .touch-target {
+    padding: 0.5rem;
+  }
+
+  /* Adjust font sizes for mobile */
+  .text-mobile-sm {
+    font-size: 0.875rem;
+  }
+
+  .text-mobile-base {
+    font-size: 1rem;
+  }
+
+  /* Adjust spacing for mobile */
+  .mobile-spacing {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 155, 155, 0.7);
+}
+
+/* Responsive animations */
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive utilities */
+.animate-slide-left {
+  animation: slide-in-from-left 0.3s ease-out;
+}
+
+.animate-slide-right {
+  animation: slide-in-from-right 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-in-from-bottom 0.3s ease-out;
+}
+
+.animate-fade {
+  animation: fade-in 0.3s ease-out;
+}
